@@ -1,0 +1,40 @@
+{
+  "name": "vue-share-ssr",
+  "version": "0.0.1",
+  "keywords": [
+    "vue-share-ssr",
+    "social-share.js",
+    "vue share ssr",
+    "vue ssr",
+    "nuxtjs",
+    "social share"
+  ],
+  "description": "vue social share based on social-share.js and it supports SSR",
+  "main": "dist/share.common.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:spa": "vue-cli-service build --target lib --name share src/index.js",
+    "build:ssr": "babel src/ssr.js --out-file dist/ssr.js",
+    "build": "npm run build:spa && npm run build:ssr",
+    "prepublish": "npm run build",
+    "publish": "git push && git push --tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slzll/vue-share-ssr.git"
+  },
+  "author": "slzll",
+  "license": "MIT",
+  "dependencies": {
+    "social-share.js": "^1.0.16"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@vue/cli-service": "^3.11.0",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
