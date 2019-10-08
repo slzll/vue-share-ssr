@@ -53,6 +53,7 @@ wechatQrcodeHelper  : '<p>微信里点“发现”，扫一下</p><p>二维码�
 ```js
 import Vue from 'vue'
 import VueShareSSR from 'vue-share-ssr/dist/ssr'
+import 'vue-share-ssr/dist/share.css'
 
 Vue.use(VueShareSSR)
 ```

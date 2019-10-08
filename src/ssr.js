@@ -1,4 +1,3 @@
-import "./social-share/css/share.scss";
 import "./social-share/js/social-share";
 
 const socialShare = window.socialShare || {};

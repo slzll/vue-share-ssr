@@ -1,6 +1,4 @@
 var UglifyJSPlugin = require("uglifyjs-webpack-plugin");
-var MiniCssExtractPlugin = require("mini-css-extract-plugin");
-var OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
   mode: "none",
@@ -20,34 +18,6 @@ module.exports = {
         test: /\.js$/,
         loader: "babel-loader",
         exclude: /node_modules/
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          "style-loader",
-          "css-loader",
-          {
-            loader: "postcss-loader",
-            options: {
-              plugins: [require("postcss-import"), require("autoprefixer")]
-            }
-          },
-          "sass-loader"
-        ]
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: "file-loader",
-        options: {
-          name: "img/[name].[hash:8].[ext]"
-        }
-      },
-      {
-        test: /\.(ttf|eot|woff|woff2)$/,
-        loader: "file-loader",
-        options: {
-          name: "fonts/[name].[hash:8].[ext]"
-        }
       }
     ]
   },
@@ -58,13 +28,5 @@ module.exports = {
         include: /\.min\.js$/
       })
     ]
-  },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: "[name].css"
-    }),
-    new OptimizeCSSAssetsPlugin({
-      assetNameRegExp: /\.min\.css$/
-    })
-  ]
+  }
 };
