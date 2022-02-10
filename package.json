@@ -37,7 +37,7 @@
     "@vue/cli-service": "^3.11.0",
     "autoprefixer": "^9.6.4",
     "babel-loader": "^8.0.6",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "sass-loader": "^8.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "vue": "^2.6.10",
