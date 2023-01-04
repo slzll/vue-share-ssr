@@ -34,7 +34,7 @@
     "@babel/cli": "^7.6.2",
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
-    "@vue/cli-service": "^3.11.0",
+    "@vue/cli-service": "^5.0.8",
     "autoprefixer": "^9.6.4",
     "babel-loader": "^8.0.6",
     "node-sass": "^4.12.0",
